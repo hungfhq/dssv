@@ -1,0 +1,11 @@
+<h3>Top Sinh vien</h3>
+<div>
+  <a *ngFor = "let sinhvien of dssinhvien" 
+  routerLink = "/detail/{{sinhvien.id}}">
+    <div>
+      <h4>{{sinhvien.name}}</h4>
+    </div>
+  </a>
+</div>
+
+<app-sinhvien-timkiem></app-sinhvien-timkiem>

@@ -1,0 +1,13 @@
+<div *ngIf = "sinhvien">
+  <h1>thong tin sinh vien</h1>
+  <h2>{{sinhvien.name | uppercase}}</h2>
+  <div><span>id: </span>{{sinhvien.id}}</div>
+  <div>
+    <label>ten: </label>
+    <input [(ngModel)] ="sinhvien.name">
+    <label> mon hoc: </label>
+    <input [(ngModel)] ="sinhvien.subject">
+</div>
+<button (click) = "goBack()">quay lai</button>
+<button (click) = "save()">luu</button>
+</div>

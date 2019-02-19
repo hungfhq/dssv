@@ -1,0 +1,18 @@
+<h2>Danh sach sinh vien</h2>
+<div>
+  <label for="">Ten:</label>
+  <input #sinhvienName>
+  <label for="">Mon hoc:</label>
+  <input #sinhvienSubject>
+  <button (click)="add(sinhvienName.value, sinhvienSubject.value);">them</button>
+</div>
+
+
+<ul class="dssinhvien">
+  <li *ngFor = "let sinhvien of dssinhvien">
+    <a routerLink = "/detail/{{sinhvien.id}}">
+    <span class="badge">{{sinhvien.id}}</span>{{sinhvien.name}} {{sinhvien.subject}}
+    </a>
+    <button  (click) = "delete(sinhvien)" title = "xoa">X</button>
+  </li>
+</ul>
